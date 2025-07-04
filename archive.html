@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🗃️ Raras Archive - Arsip Digital Cirebon</title>
+  <link rel="stylesheet" href="archive.css">
+  
+</head>
+
+<header>
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <img src="public/logo.PNG" alt="Logo Rarasajiné" class="logo-img" />
+        </div>
+        <ul class="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="tentang.html">Tentang</a></li>
+          <li><a href="profil.html">Profil</a></li>
+        </ul>
+        <button class="burger" id="burger-toggle" title="Toggle Navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="burger-dropdown" id="burger-dropdown">
+        <a href="rarasingwaktu.html">
+          <img src="public/ICON/WAKTU.png" alt="Waktu" />
+          <div>
+            <h4>Raras ing Waktu</h4>
+            <p>Jelajahi sejarah Cirebon dari masa ke masa</p>
+          </div>
+        </a>
+        <a href="archive.html">
+          <img src="public/ICON/ARSIP.png" alt="Archive" />
+          <div>
+            <h4>Raras Archive</h4>
+            <p>Intip koleksi warisan budaya digital</p>
+          </div>
+        </a>
+        <a href="rarasingbantu.html">
+          <img src="public/ICON/BOT.png" alt="Bantu" />
+          <div>
+            <h4>Raras ing Bantu</h4>
+            <p>Tanya tentang Cirebon dengan RarasBot</p>
+          </div>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <header class="archive-header"style="background: url('public/bannerarchive.png') center/cover no-repeat;">
+    <h1>🗃️ Raras Archive</h1>
+    <p>Perpustakaan Digital Kekayaan Budaya Cirebon</p>
+    
+    <input type="text" id="searchInput" placeholder="Cari arsip... (contoh: Mega Mendung, Topeng Panji, dll)">
+    
+    <div class="filters">
+      <select id="categoryFilter">
+        <option value="">Semua Kategori</option>
+        <option value="Seni dan Pertunjukan">Seni dan Pertunjukan</option>
+        <option value="Batik dan Kerajinan">Batik dan Kerajinan</option>
+        <option value="Sejarah dan Keraton">Sejarah dan Keraton</option>
+        <option value="Naskah">Naskah dan Manuskrip</option>
+        <option value="arsitektur">Arsitektur dan Religi</option>
+        <option value="kuliner">Kuliner Tradisional</option>
+        <option value="bahasa">Bahasa dan Aksara</option>
+        <option value="lainnya">Peninggalan Sejarah Lainnya</option>
+      </select>
+    </div>
+  </header>
+
+  <main id="archiveGrid" class="archive-grid">
+
+      <section id="pengertian" class="content-section">
+      <div class="container">
+        <h2 data-aos="fade-up">Selamat datang di Raras Archive, Gerbang Digital Warisan Budaya Cirebon.</h2>
+        <p data-aos="fade-up" data-aos-delay="100">
+          Di sini, Anda bisa menjelajahi jejak sejarah, seni, dan kearifan lokal yang telah diwariskan dari generasi ke generasi. Dari batik bermotif Mega Mendung, tarian topeng yang magis, hingga manuskrip kuno yang sarat makna — semua dikurasi secara digital agar budaya Cirebon tetap hidup dan dapat dinikmati oleh siapa saja, kapan saja.
+          Raras Archive bukan hanya tempat menyimpan, tapi ruang untuk merasakan dan memahami kedalaman budaya Cirebon.
+        </p>
+      </div>
+    </section>
+
+<div class="category-container">
+  <h2 class="category-title">🎭 Seni dan Pertunjukan</h2>
+  <div class="scroll-container">
+    
+    <div class="item-card" onclick="showDetails(
+      'Tari Topeng Cirebon', 
+      'Tari Topeng Cirebon bukan sekadar pertunjukan seni, melainkan cerminan dari filosofi hidup dan spiritualitas masyarakat pesisir utara Jawa. Tarian ini dimainkan oleh penari tunggal yang menggunakan topeng kayu sebagai simbolisasi karakter-karakter dalam cerita. Setiap topeng memiliki nama, warna, dan makna tersendiri—mulai dari Panji yang melambangkan kesucian dan kelembutan, Samba sebagai simbol masa muda yang lincah, Rumyang yang mengandung filosofi cinta dan kedewasaan, hingga Tumenggung yang menggambarkan kedisiplinan dan Kelana sebagai wujud dari nafsu duniawi yang harus ditundukkan. Tari Topeng lahir dari tradisi keraton dan berkembang menjadi seni rakyat, menjembatani antara nilai-nilai aristokratik dan kehidupan masyarakat biasa. Gerakan tarinya halus, penuh kontrol, dan sering kali disertai alunan gamelan Cirebon yang khas. Dalam banyak pementasan tradisional, tarian ini juga diselipkan pesan moral, pendidikan karakter, bahkan dakwah spiritual. Menonton Tari Topeng Cirebon seperti menyaksikan perjalanan batin manusia—dari kelahiran yang murni hingga pergulatan batin melawan keinginan duniawi. Inilah warisan tak ternilai dari tanah Cirebon, yang tidak hanya memanjakan mata, tetapi juga menggetarkan jiwa.', 
+      'public/tari topeng cirebon.jpg')">
+      <img src="public/BUDAYA.jpg" alt="Tari Topeng Cirebon">
+      <p>Tari Topeng Cirebon</p>
+    </div>
+
+    <div class="item-card" onclick="showDetails(
+      'Wayang Golek Cepak', 
+      'Wayang Golek Cepak merupakan bentuk seni pertunjukan khas Cirebon yang memadukan nilai-nilai spiritual, pendidikan moral, dan kritik sosial dalam balutan cerita dan lakon. Berbeda dari wayang golek Sunda yang berwajah bulat memanjang, wayang cepak memiliki bentuk kepala yang datar (cepak berarti rata/datar), serta ragam karakter yang lebih dekat dengan tokoh-tokoh lokal seperti Sunan Kalijaga, Ki Gede Pamanahan, hingga tokoh legendaris seperti Prabu Siliwangi. Pertunjukan wayang ini biasa dimainkan oleh dalang tunggal yang sekaligus menjadi narator, seniman suara, penari, dan penyampai pesan moral. Dalam setiap pagelaran, cerita yang diangkat sering kali berkaitan dengan penyebaran Islam di tanah Jawa, sejarah kerajaan Cirebon, dan nilai-nilai luhur masyarakat pesisir. Bahasa yang digunakan pun fleksibel—campuran antara Bahasa Cirebon, Jawa, dan Sunda—mencerminkan identitas multikultur yang melekat pada Cirebon. Wayang Golek Cepak bukan sekadar hiburan. Ia adalah medium pendidikan spiritual dan sosial yang telah diwariskan turun-temurun. Melalui gerak kayu dan suara dalang, nilai kearifan lokal tetap hidup dan mampu menembus batas zaman, menjadi pengingat akan pentingnya kejujuran, keberanian, dan kasih sayang dalam kehidupan.', 
+      'public/wayanggolekcepak1.jpg')">
+      <img src="public/wayanggolekcepak.jpg" alt="Wayang Golek Cirebon">
+      <p>Wayang Golek Cirebon</p>
+    </div>
+
+    <div class="item-card" onclick="showDetails(
+      'Sandiwara Cirebon', 
+      'Sandiwara Cirebon adalah salah satu bentuk seni pertunjukan tradisional yang sangat populer di kalangan masyarakat pesisir Jawa Barat, khususnya wilayah Cirebon, Indramayu, hingga Majalengka. Sandiwara ini berkembang sebagai teater rakyat yang dimainkan secara terbuka di panggung sederhana, biasanya saat ada hajatan, sedekah bumi, atau acara desa lainnya. Keunikannya terletak pada bahasa tutur yang digunakan—yakni Bahasa Cirebon—yang membuatnya dekat dengan kehidupan sehari-hari masyarakat. Sandiwara Cirebon menggabungkan unsur dialog, nyanyian, lawakan, hingga drama tragis atau kepahlawanan. Cerita-cerita yang dibawakan sering kali diadaptasi dari kisah perjuangan rakyat, legenda lokal, hingga kritik sosial terhadap ketimpangan dan keadilan. Penonton tidak hanya datang untuk hiburan, tetapi juga untuk belajar dan merenung. Tokoh-tokoh seperti Ki Dalang, tukang lawak (pelawak), dan pemeran utama tampil bergantian membentuk harmoni yang memikat. Musik pengiringnya biasanya terdiri dari gamelan sederhana yang dikolaborasikan dengan alat musik modern seperti organ dan gitar, menciptakan kesan kontemporer namun tetap berakar tradisi. Dalam perkembangan modern, sandiwara Cirebon juga merambah dunia digital dan panggung nasional, menjadikannya salah satu warisan budaya yang tetap relevan dan hidup di tengah zaman. Lebih dari sekadar tontonan, sandiwara Cirebon adalah cermin aspirasi rakyat—tentang harapan, perjuangan, dan kebersamaan yang tak lekang oleh waktu.usik tradisional Cirebon seperti Gamelan dan Tarling mencerminkan perpaduan budaya yang kaya.', 
+      'public/sandiwara.jpg')">
+      <img src="public/sandiwara1.jpg" alt="sandiwara">
+      <p>Sandiwara Cirebon</p>
+    </div>
+
+    
+    <div class="item-card" onclick="showDetails(
+      'Sintren', 
+      'Sintren adalah salah satu seni pertunjukan khas Cirebon yang sarat akan unsur mistis dan spiritual. Tarian ini tidak hanya menghibur, tetapi juga menjadi bagian dari ritual budaya yang mencerminkan hubungan antara manusia, alam, dan dunia gaib. Sintren dikenal luas di wilayah pesisir utara Jawa Barat dan Jawa Tengah, seperti Cirebon, Indramayu, Brebes, hingga Tegal. Dalam pementasannya, seorang penari perempuan—yang disebut Sintren  —akan dimasukkan ke dalam kurungan atau bilik tertutup. Sebelum menari, ia akan didoakan dan dimediasi oleh seorang pawang. Ketika gendang dan musik tradisional mulai mengalun, penari yang sebelumnya berpakaian biasa akan keluar dari bilik dalam keadaan sudah mengenakan busana tari lengkap tanpa bantuan siapapun, seolah terjadi transformasi gaib. Penampilan Sintren memukau dengan gerakan yang gemulai, mata yang tertutup, dan ekspresi yang kerap kali menunjukkan bahwa si penari sedang dalam keadaan trans atau kerasukan roh leluhur. Tarian ini diiringi oleh musik tradisional dengan irama khas, termasuk suling, kendang, dan gong, yang memperkuat suasana magis pertunjukan. Selain unsur hiburan, Sintren juga memiliki makna simbolis sebagai bentuk pemujaan terhadap Dewi Sri—dewi kesuburan dan kemakmuran dalam kepercayaan masyarakat Jawa. Oleh karena itu, pertunjukan ini sering diadakan dalam rangka syukuran panen atau hajat besar lainnya. Sintren bukan sekadar tarian, melainkan manifestasi nilai-nilai spiritual, warisan leluhur, dan identitas budaya pesisir yang terus dijaga agar tidak hilang oleh arus modernitas.', 
+      'public/sintren.jpeg')">
+      <img src="public/sintren1.jpg" alt="sandiwara">
+      <p>Sintren</p>
+    </div>
+
+    
+    <div class="item-card" onclick="showDetails(
+      'Tarling (Gitar & Suling)', 
+      'Sandiwara Cirebon adalah salah satu bentuk seni pertunjukan tradisional yang sangat populer di kalangan masyarakat pesisir Jawa Barat, khususnya wilayah Cirebon, Indramayu, hingga Majalengka. Sandiwara ini berkembang sebagai teater rakyat yang dimainkan secara terbuka di panggung sederhana, biasanya saat ada hajatan, sedekah bumi, atau acara desa lainnya. Keunikannya terletak pada bahasa tutur yang digunakan—yakni Bahasa Cirebon—yang membuatnya dekat dengan kehidupan sehari-hari masyarakat. Sandiwara Cirebon menggabungkan unsur dialog, nyanyian, lawakan, hingga drama tragis atau kepahlawanan. Cerita-cerita yang dibawakan sering kali diadaptasi dari kisah perjuangan rakyat, legenda lokal, hingga kritik sosial terhadap ketimpangan dan keadilan. Penonton tidak hanya datang untuk hiburan, tetapi juga untuk belajar dan merenung. Tokoh-tokoh seperti Ki Dalang, tukang lawak (pelawak), dan pemeran utama tampil bergantian membentuk harmoni yang memikat. Musik pengiringnya biasanya terdiri dari gamelan sederhana yang dikolaborasikan dengan alat musik modern seperti organ dan gitar, menciptakan kesan kontemporer namun tetap berakar tradisi. Dalam perkembangan modern, sandiwara Cirebon juga merambah dunia digital dan panggung nasional, menjadikannya salah satu warisan budaya yang tetap relevan dan hidup di tengah zaman. Lebih dari sekadar tontonan, sandiwara Cirebon adalah cermin aspirasi rakyat—tentang harapan, perjuangan, dan kebersamaan yang tak lekang oleh waktu.usik tradisional Cirebon seperti Gamelan dan Tarling mencerminkan perpaduan budaya yang kaya.', 
+      'public/tarling.jpg')">
+      <img src="public/tarling1.jpeg" alt="sandiwara">
+      <p>Tarling (Gitar & Suling)</p>
+    </div>
+
+  </div>
+</div>
+
+
+    <div class="category-container">
+      <h2 class="category-title">🎨 Batik dan Kerajinan</h2>
+      <div class="scroll-container">
+
+
+     <div class="item-card" onclick="showDetails(
+      'Batik Mega Mendung', 
+      'Batik Mega Mendung merupakan salah satu motif batik paling terkenal dari Cirebon dan telah menjadi simbol identitas visual kota ini. Motif ini menampilkan bentuk awan bergelombang yang biasanya digambarkan dalam warna-warna kontras seperti biru, merah, ungu, atau hijau. Setiap lekukan awan dibuat berlapis-lapis, menciptakan kesan dinamis dan mendalam. Secara filosofi, motif Mega Mendung menggambarkan ketenangan dalam menghadapi amarah atau situasi sulit, layaknya awan yang menutupi matahari agar tidak terlalu terik. Awan juga melambangkan naungan dan perlindungan, merepresentasikan nilai kesabaran, kesejukan hati, dan kekuatan spiritual. Motif ini mencerminkan perpaduan budaya Cirebon yang unik, khususnya pengaruh dari budaya Tiongkok yang masuk ke wilayah ini melalui jalur perdagangan maritim pada masa lampau. Bentuk awan dalam Mega Mendung memiliki kemiripan dengan awan-awan dalam ornamen seni Tiongkok, namun dikembangkan secara khas oleh para seniman batik keraton di Cirebon. Batik Mega Mendung kini tidak hanya digunakan dalam pakaian adat atau upacara, tetapi juga diaplikasikan dalam berbagai produk modern seperti tas, taplak meja, hiasan dinding, hingga interior kafe atau galeri seni. Warisan budaya ini terus dikembangkan dan dilestarikan oleh generasi muda Cirebon sebagai lambang kreativitas dan kebanggaan lokal.', 
+      'public/foto_batik_mega_mendung.png')">
+      <img src="public/foto_batik_mega_mendung.png" alt="megamendung">
+      <p>Batik Mega Mendung</p>
+    </div>
+
+     <div class="item-card" onclick="showDetails(
+      'Batik Singa Payung', 
+      'Batik Singa Payung adalah salah satu motif batik klasik dari Cirebon yang sarat dengan nilai filosofi dan sejarah. Motif ini menampilkan singa, simbol kekuatan dan kewibawaan, yang biasanya digambarkan duduk atau berdiri di bawah sebuah payung kebesaran, lambang kehormatan dan perlindungan. Motif ini sering dijumpai pada batik keraton, terutama yang digunakan dalam upacara-upacara adat atau pakaian para bangsawan Kesultanan Cirebon. Singa dalam budaya Cirebon bukan hanya representasi binatang, tetapi juga memiliki makna simbolis sebagai penjaga nilai-nilai luhur dan pelindung rakyat. Sementara itu, payung melambangkan kekuasaan raja atau pemimpin yang menaungi rakyatnya dengan keadilan dan kasih sayang. Kombinasi keduanya menciptakan gambaran ideal seorang pemimpin: kuat namun melindungi, berwibawa namun rendah hati. Motif Singa Payung juga mencerminkan pengaruh budaya Tiongkok dan India yang masuk ke Cirebon melalui jalur perdagangan. Ini terlihat dari bentuk ornamen, detil pada mahkota singa, dan gaya dekoratif payung yang kadang menyerupai motif klasik dari luar Nusantara—namun telah mengalami akulturasi dengan gaya lokal Cirebon yang lebih halus dan lembut. Saat ini, Batik Singa Payung tidak hanya dipakai untuk busana adat, tetapi juga dijadikan koleksi seni, hiasan interior, dan inspirasi dalam desain kontemporer. Keanggunannya yang khas membuatnya tetap relevan dan menjadi bagian penting dalam warisan budaya batik Cirebon.', 
+      'public/singapayung.jpg')">
+      <img src="public/singapayung.jpeg" alt="singapayung">
+      <p>Batik Singa Payung</p>
+    </div>
+
+     <div class="item-card" onclick="showDetails(
+      'Batik Paksi Naga Liman', 
+      'Batik Paksinaga Liman adalah salah satu mahakarya batik klasik Cirebon yang memiliki nilai filosofi tinggi dan bentuk yang unik. Motif ini menggambarkan makhluk mitologi hasil gabungan tiga binatang: Paksi (burung), Naga (ular naga), dan Liman (gajah). Ketiga unsur tersebut menyatu dalam satu sosok yang melambangkan kekuatan spiritual, kebijaksanaan, dan kemegahan seorang pemimpin. Paksi (burung) melambangkan hubungan spiritual dan keterhubungan dengan dunia atas atau langit, simbol dari visi dan keluhuran budi. Naga mencerminkan kekuatan mistis, ketangguhan, dan perlindungan terhadap bahaya. Liman (gajah) menyimbolkan kekuatan besar, keteguhan, dan wibawa pemimpin dalam menjaga rakyatnya. Motif ini berasal dari lingkungan Keraton Kasepuhan Cirebon, dan dahulu digunakan sebagai simbol kekuasaan dan kewibawaan para raja. Bentuknya rumit, penuh detail artistik, dan mencerminkan perpaduan budaya lokal Cirebon dengan pengaruh Hindu, Tiongkok, dan Islam yang kental. Warna yang digunakan pun cenderung khas: merah soga, biru tua, dan hitam yang menunjukkan keanggunan dan kekuatan. Kini, Batik Paksinaga Liman tidak hanya menjadi simbol kebudayaan keraton, tetapi juga dianggap sebagai salah satu representasi utama dari batik Cirebon yang berakar pada narasi sejarah dan kepercayaan lokal. Keunikan dan kekuatan maknanya menjadikan motif ini sangat dicari baik oleh kolektor maupun pecinta batik nusantara.', 
+      'public/paksinagaliman.jpg')">
+      <img src="public/paksinagaliman1.jpg" alt="paksinagaliman">
+      <p>Batik Paksi Naga Liman</p>
+    </div>
+
+     <div class="item-card" onclick="showDetails(
+      'Kerajinan Rotan', 
+      'Kerajinan rotan merupakan salah satu warisan budaya Cirebon yang telah mendunia. Terkenal dengan kualitasnya yang kuat, lentur, dan estetis, rotan dari Cirebon tidak hanya menjadi komoditas lokal, tetapi juga diekspor ke berbagai negara sebagai produk unggulan. Sentra utama kerajinan ini berada di daerah Trusmi dan Tegalwangi, dua kawasan yang telah lama dikenal sebagai pusat pengrajin rotan. Di tangan para pengrajin yang telaten dan terampil, rotan diolah menjadi berbagai produk rumah tangga seperti kursi, meja, keranjang, rak, tempat tidur, hingga dekorasi interior modern bernilai seni tinggi. Proses pembuatannya sangat tradisional dan ramah lingkungan — dimulai dari pemilahan rotan, perendaman, pengeringan, hingga proses pembentukan dan finishing yang dilakukan dengan tangan. Cirebon juga dikenal memiliki teknik anyaman khas yang rumit dan unik, mencerminkan kearifan lokal serta cita rasa seni yang tinggi. Lebih dari sekadar kerajinan, rotan Cirebon adalah cermin kreativitas, keberlanjutan, dan identitas budaya. Ia menyatukan fungsi dan keindahan dalam bentuk yang tak lekang oleh waktu. Keberlangsungan kerajinan ini menjadi bukti bahwa Cirebon tak hanya melestarikan budaya leluhur, tapi juga mampu menjawab kebutuhan zaman dengan inovasi yang tetap berakar pada tradisi.', 
+      'public/rotan1.jpg')">
+      <img src="public/rotan.jpg" alt="rotan">
+      <p>Kerajinan Rotan</p>
+    </div>
+
+    <div class="item-card" onclick="showDetails(
+      'Topeng Kayu Cirebon', 
+      'Topeng Kayu Cirebon bukan sekadar hasil kerajinan tangan, tetapi juga simbol mendalam dari seni pertunjukan, spiritualitas, dan filosofi masyarakat Cirebon. Topeng ini dikenal melalui seni Tari Topeng Cirebon, sebuah tradisi turun-temurun yang mencerminkan perjalanan hidup manusia melalui lima karakter topeng: Panji, Samba, Rumyang, Tumenggung, dan Klana. Topeng-topeng ini dibuat dengan tangan oleh para perajin menggunakan kayu lokal seperti kayu pule atau mahoni. Proses pembuatannya sangat detail, mulai dari pemilihan kayu, pemahatan, pengamplasan, hingga pengecatan, yang semuanya mencerminkan keahlian artistik tinggi dan nilai spiritual. Setiap topeng memiliki ekspresi wajah dan warna yang khas, mencerminkan karakter yang berbeda—dari kelembutan dan kepolosan hingga ambisi dan kemarahan. Misalnya, Topeng Panji melambangkan kelahiran dan kesucian, dengan wajah tenang dan gerakan tarian yang lembut, sementara Topeng Klana mewakili nafsu dan kekuasaan, ditampilkan dengan wajah merah dan gerakan yang agresif. Dengan alur dramatik yang kuat, tarian ini menggambarkan bagaimana manusia bergumul dengan berbagai sifat dalam dirinya. Lebih dari sekadar hiburan, Topeng Kayu Cirebon menjadi sarana edukasi moral dan spiritual, serta simbol identitas budaya yang terus dilestarikan hingga kini. Dalam konteks modern, topeng ini juga menjadi suvenir dan karya seni bernilai tinggi yang diminati kolektor dalam dan luar negeri. Topeng Kayu Cirebon adalah warisan tak ternilai yang terus hidup dan berkembang di tengah zaman—menjadi jembatan antara masa lalu yang penuh makna dan masa kini yang terus mencari akar budaya.', 
+      'public/topeng1.jpg')">
+      <img src="public/topeng.jpg" alt="topeng">
+      <p>Topeng Kayu Cirebon</p>
+    </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="category-container">
+      <h2 class="category-title">🏯 Sejarah dan Keraton</h2>
+      <div class="scroll-container">
+    <div class="item-card" onclick="showDetails(
+      'Keraton Kasepuhan', 
+      'Keraton Kasepuhan adalah keraton tertua dan paling megah di Cirebon. Didirikan pada tahun 1529 oleh Pangeran Mas Mochammad Arifin II, cicit dari Sunan Gunung Jati, keraton ini menjadi pusat pemerintahan sekaligus simbol supremasi Kesultanan Cirebon.Bangunannya merupakan perpaduan arsitektur Jawa, Islam, Cina, dan Eropa. Dari gerbangnya yang penuh ornamen megah, hingga ukiran kayu di dalam bangunan utama, setiap sudut Keraton Kasepuhan memancarkan kemewahan dan filosofi luhur. Salah satu peninggalan paling ikonik adalah Kereta Singa Barong, kereta kerajaan buatan abad ke-17 yang hanya digunakan dalam upacara penting. Di halaman keraton juga terdapat Museum Pusaka, yang menyimpan koleksi benda-benda bersejarah, termasuk tombak, keris, gamelan, dan naskah-naskah kuno. Keraton ini hingga kini tetap aktif digunakan sebagai tempat upacara adat, ziarah budaya, dan pusat pelestarian warisan kesultanan. Keraton Kasepuhan bukan hanya bangunan fisik, tetapi juga simbol kejayaan peradaban pesisir utara Jawa yang berlandaskan nilai spiritual dan kearifan lokal.', 
+      'public/kesepuhan.webp')">
+      <img src="public/keraton kesepuhan.webp" alt="kasepuhan">
+      <p>Keraton Kasepuhan</p>
+    </div>
+
+    <div class="item-card" onclick="showDetails(
+      'Keraton Kanoman', 
+      'Didirikan pada tahun 1588 oleh Sultan Anom I, cucu dari Sunan Gunung Jati, Keraton Kanoman merupakan pemekaran dari Keraton Kasepuhan yang berdiri sebagai simbol dinamika politik dan keberlanjutan budaya. Ciri khas Keraton Kanoman adalah warna putih dan biru yang mendominasi bangunannya—berbeda dari keraton lain yang cenderung merah bata atau coklat. Arsitekturnya merupakan kombinasi dari gaya Hindu-Buddha, Islam, dan Tiongkok, yang mencerminkan akulturasi budaya Cirebon. Salah satu warisan penting dari Keraton Kanoman adalah Kereta Paksi Naga Liman, kereta kerajaan berwujud campuran gajah, naga, dan burung garuda—melambangkan kekuasaan dan perlindungan spiritual. Di dalam keraton, tersimpan berbagai koleksi bersejarah seperti lukisan, artefak keagamaan, dan alat musik tradisional.Keraton ini masih menjadi tempat tinggal Sultan Kanoman beserta keluarga kerajaan dan tetap berfungsi sebagai pusat kegiatan adat seperti upacara Grebeg Syawal, Maulid Nabi, dan ritual pelestarian tradisi.', 
+      'public/kanoman1.jpg')">
+      <img src="public/kanoman.jpeg" alt="kanoman">
+      <p>Keraton Kanoman</p>
+    </div>
+
+    <div class="item-card" onclick="showDetails(
+      'Keraton Kacirebonan', 
+      'Keraton ini didirikan pada tahun 1807 sebagai hasil dari dinamika internal antara Keraton Kasepuhan dan Kanoman. Keraton Kacirebonan berdiri sebagai bentuk kompromi dan pelestarian nilai-nilai kesultanan yang ingin lebih fokus pada spiritualitas dan pendidikan masyarakat.Meskipun ukurannya lebih kecil dibandingkan dua keraton lainnya, Kacirebonan memiliki peran penting dalam menjaga warisan budaya Cirebon, terutama dalam bidang kesenian dan pendidikan. Keraton ini sangat aktif dalam pengembangan seni tari topeng, gamelan, dan bahasa Cirebon.Bangunannya memiliki perpaduan antara gaya arsitektur tradisional dan kolonial. Di dalamnya, pengunjung dapat menjumpai berbagai peninggalan bersejarah, termasuk kitab kuno, peralatan upacara adat, serta koleksi batik khas Cirebon.Keraton Kacirebonan dikenal dengan semangat inklusif dan edukatif, menjadikannya pusat belajar budaya yang terbuka untuk publik dan generasi muda.', 
+      'public/Keraton-Kacirebonan1.jpg')">
+      <img src="public/Keraton-kacirebonan.jpg" alt="Kacirebonan">
+      <p>Keraton Kacirebonan</p>
+    </div>
+       
+      </div>
+    </div>
+
+    <div class="category-container">
+      <h2 class="category-title">📚 Naskah dan Manuskrip</h2>
+      <div class="scroll-container">
+   <div class="item-card" onclick="showDetails(
+      'Pustaka Agami Islam', 
+      'Di laman SINGKONO, disebutkan Pustaka Agami Islami ini merupakan naskah yang terdiri dari 190 halaman. Tahun penulisan naskah tersebut diperkirakan pada abad 19. Naskah ini dimiliki oleh Keraton Kanoman. Adapun penulisnya, dalam naskah tersebut tertulis nama Haji Syarifudin yang merujuk pada Pangeran Jumiah Mataram dan Sultan Muhammad Mataram. Bahasa yang digunakan dalam naskah tersebut adalah bahasa Cirebon lama dengan tulisan arab pegon. Naskah ini membahas tentang ajaran agama Islam mulai syariat, seperti bab salat, zakat, puasa dan lain-lain. Tidak hanya itu naskah ini juga membahas tentang tarekat, hakikat hingga marifat.',
+      'public/agamiislam.jpg')">
+      <img src="public/agamiislam.jpeg" alt="agamiislam">
+      <p>Pustaka Agami Islam</p>
+    </div>
+
+       <div class="item-card" onclick="showDetails(
+      'Naskah Jungjang ', 
+      'Naskah berikutnya yang telah digitalisasi adalah Naskah Jungjang. Naskah ini terdiri dari 172 halaman. Naskah tersebut memiliki panjang 20 cm, lebar 14 Cm dan tebal 3 cm. Adapun bahasa yang digunakan dalam naskah tersebut adalah bahasa Arab. Begitu pun dengan aksara yang digunakan. Naskah tersebut dibuat dengan menggunakan kertas Eropa. Namun, pada laman SINGKONO tidak ada deskripsi yang menjelaskan tentang isi dari naskah tersebut ',
+      'public/junjang.jpg')">
+      <img src="public/junjang.jpg" alt="NaskahJungjang ">
+      <p>Naskah Jungjang </p>
+    </div>
+
+
+    <div class="item-card" onclick="showDetails(
+      'Wawacan Jaka Supena', 
+      'Wawacan Jaka Supena atau Arya Supena merupakan naskah yang berisi tentang cerita rakyat Jawa Barat, tepatnya di daerah Sumedang. Naskah tersebut terdiri dari 198 halaman dan diperkirakan ditulis pada abad 19. Naskah tersebut secara umum dalam kondisi baik. Namun ada beberapa lembar yang sobek dan sulit dibaca. Bahasa yang digunakan dalam naskah tersebut adalah bahasa Sunda dengan tulisan arab pegon. Wawacan Jaka Supena atau Arya Supena ini merupakan naskah yang menceritakan tentang prahara kehidupan seorang raja, anak dan permaisurinya yang terjebak dalam berbagai konflik',
+      'public/wawacan.jpg')">
+      <img src="public/wawacan.jpg" alt="wawacan">
+      <p>Wawacan Jaka Supena</p>
+    </div>
+
+
+    <div class="item-card" onclick="showDetails(
+      'Surat Al-Fatawi', 
+      'Surat Al-Fatawi ini adalah naskah yang menceritakan tentang kisah perjuangan sekelompok orang yang memiliki jiwa penolong. Naskah ini terdiri dari 318 halaman dan ditulis oleh KH Ahmad Syari Martakusuma pada tahun 1910. Pada laman SINGKONO diterangkan naskah tersebut berisi tentang cerita Pitung. Bagi masyarakat Betawi, Pitung merupakan seorang tokoh yang dikenal sebagai pahlawan. Namun, dalam naskah ini Pitung bukanlah nama seseorang. Melainkan nama sekelompok jawara pembela rakyat dan penentang penjajah yang terdiri dari 7 orang Pitung (Pitu Pitulung).',
+      'public/Surat Al-Fatawi.png')">
+      <img src="public/alpatawi.jpeg" alt="SuratAl-Fatawi">
+      <p>Surat Al-Fatawi</p>
+    </div>
+      </div>
+    </div>
+    
+    <div class="category-container">
+      <h2 class="category-title">🕌 Arsitektur dan Religi</h2>
+      <div class="scroll-container">
+
+    <div class="item-card" onclick="showDetails(
+      'Masjid Agung Sang Cipta Rasa', 
+      'Masjid Agung Sang Cipta Rasa adalah salah satu masjid tertua dan paling bersejarah di Jawa Barat. Dibangun pada abad ke-15 oleh Wali Songo atas perintah Sunan Gunung Jati, masjid ini menjadi simbol awal penyebaran Islam di wilayah Cirebon. Nama Sang Cipta Rasa sendiri bermakna yang mencipta rasa, menggambarkan makna spiritual yang mendalam.Ciri khas arsitektur masjid ini adalah gaya arsitektur Majapahit-Islam, dengan material bata merah, atap tumpang bersusun tiga tanpa kubah, serta tanpa pengeras suara. Di dalamnya, terdapat Mihrab Panjunan yang dibuat oleh Sunan Kalijaga, dan hingga kini menjadi bagian sakral masjid. Menariknya, masjid ini memiliki tujuh imam utama yang memimpin salat berjamaah secara bergantian, sebuah tradisi yang masih dipertahankan sebagai bentuk penghormatan terhadap nilai kebersamaan dalam Islam.',
+      'public/Masjid Agung Sang Cipta Rasa.jpeg')">
+      <img src="public/Masjid Agung Sang Cipta Rasa.jpg" alt="MasjidAgungSangCiptaRasa">
+      <p>Masjid Agung Sang Cipta Rasa</p>
+    </div>
+
+     <div class="item-card" onclick="showDetails(
+      'Makam Sunan Gunung Jati', 
+      'Terletak di kawasan Gunung Sembung, Makam Sunan Gunung Jati adalah tempat peristirahatan terakhir salah satu dari Wali Songo dan pendiri Kesultanan Cirebon. Kompleks pemakaman ini menjadi pusat ziarah spiritual yang sangat dihormati di Indonesia, bahkan di Asia Tenggara. Kompleks makam terbagi dalam sembilan tingkat, tetapi hanya pengunjung tertentu yang diizinkan naik hingga tingkat paling atas. Di dalam area makam, banyak terdapat ornamen Tiongkok seperti keramik dan porselen antik, mencerminkan hubungan erat Cirebon dengan budaya luar seperti Tiongkok dan Arab.Makam ini bukan hanya situs religius, tapi juga pusat spiritual, budaya, dan sejarah, yang mengingatkan pengunjung akan pentingnya toleransi, persatuan, dan peran para wali dalam membangun peradaban Islam di Nusantara.',
+      'public/Makam Sunan Gunung Jati1.jpg')">
+      <img src="public/Makam Sunan Gunung Jati.jpeg" alt="Makam Sunan Gunung Jati">
+      <p>Makam Sunan Gunung Jati</p>
+    </div>
+
+    <div class="item-card" onclick="showDetails(
+      'Goa Syunyaragi', 
+      'Goa Sunyaragi, atau sering disebut Taman Sari Goa Sunyaragi, adalah kompleks gua buatan yang unik dan sarat makna spiritual di Kota Cirebon, Jawa Barat. Nama “Sunyaragi” berasal dari kata sunya yang berarti sunyi dan ragi yang berarti raga, mencerminkan fungsi tempat ini sebagai lokasi semedi atau kontemplasi bagi para bangsawan dan prajurit Kesultanan Cirebon. Dibangun pada abad ke-17, situs ini menjadi simbol perpaduan antara kekuatan fisik dan ketenangan batin, serta warisan arsitektur yang kaya akan simbolisme. Arsitektur Goa Sunyaragi sangat khas, dibangun menggunakan batu karang laut yang membentuk lorong-lorong, ruang rahasia, dan taman-taman kecil. Kompleks ini memadukan gaya arsitektur Jawa, Tionghoa, dan Timur Tengah yang dapat dilihat dari bentuk bangunannya yang asimetris namun harmonis. Beberapa bagian penting dari kompleks ini adalah Bangsal Kaputren (ruang putri keraton), Petilasan Prabu Siliwangi (tempat pertapaan), serta berbagai ornamen batu yang menyerupai wajah singa, naga, dan simbol-simbol sakral lainnya. Kini, Goa Sunyaragi menjadi destinasi wisata budaya dan sejarah yang penting di Cirebon. Tak hanya sebagai tempat kunjungan sejarah, area ini juga sering digunakan untuk pementasan seni tradisional seperti Tari Topeng dan pertunjukan teatrikal sejarah. Goa Sunyaragi menawarkan pengalaman mendalam tentang bagaimana masa lalu dijaga melalui ketenangan, filosofi, dan kearifan lokal yang tetap relevan di era modern.',
+      'public/Goa Syunyaragi1.jpeg')">
+      <img src="public/Goa Syunyaragi.jpeg" alt="Goa Syunyaragi">
+      <p>Goa Syunyaragi</p>
+    </div>
+    
+  <div class="item-card" onclick="showDetails(
+      'Masjid Raya At-Taqwa', 
+      'Berada di jantung kota Cirebon, Masjid Raya At-Taqwa adalah ikon religius modern yang melambangkan dinamika keislaman kontemporer di kota ini. Diresmikan pada tahun 1951 dan direnovasi secara megah pada awal 2000-an, masjid ini kini berdiri megah dengan kubah besar berwarna emas dan menara tinggi yang menjulang.asjid ini tidak hanya berfungsi sebagai tempat ibadah, tetapi juga menjadi pusat kegiatan sosial, dakwah, dan pendidikan Islam. Di bulan Ramadan, masjid ini ramai dikunjungi jemaah dari berbagai daerah untuk mengikuti buka puasa bersama, salat tarawih, dan kajian keislaman. Lingkungannya yang asri, dengan pepohonan rindang dan taman terbuka, membuat Masjid At-Taqwa menjadi ruang spiritual sekaligus tempat rekreasi religi yang menyatu dengan kehidupan masyarakat modern.',
+      'public/Masjid Raya At-Taqwa.jpg')">
+      <img src="public/Masjid Raya At-Taqwa.jpeg" alt="Masjid Raya At-Taqwa">
+      <p>Masjid Raya At-Taqwa</p>
+  </div>
+      </div>
+    </div>
+
+    <div class="category-container">
+      <h2 class="category-title">🍛 Kuliner Tradisional</h2>
+      <div class="scroll-container" >
+        
+      <div class="item-card" onclick="showDetails(
+      'Empal Gentong', 
+      'Empal Gentong adalah hidangan khas Cirebon berupa gulai daging sapi yang dimasak dalam gentong tanah liat menggunakan kayu bakar. Kuahnya berwarna kuning keemasan karena menggunakan kunyit sebagai bumbu utama, dilengkapi santan dan rempah-rempah seperti kemiri, lengkuas, dan serai yang menghasilkan rasa gurih dan aroma yang khas. Potongan daging sapi, usus, babat, dan terkadang paru menjadi isiannya, memberikan variasi tekstur dalam satu suapan. Keunikan dari empal gentong tidak hanya terletak pada rasanya, tapi juga cara penyajiannya. Biasanya disajikan bersama nasi putih atau lontong, dan dilengkapi dengan kucai segar serta taburan bawang goreng. Di beberapa warung tradisional, empal gentong disajikan langsung dari gentong yang diletakkan di atas bara api, menjaga kehangatan dan aroma gulai tetap menggoda dari awal hingga akhir santapan. Hidangan ini telah menjadi ikon kuliner Cirebon yang tidak boleh dilewatkan oleh wisatawan. Banyak penjual empal gentong legendaris seperti di kawasan Battembat maupun Krucuk. Cita rasanya yang kaya dan teknik memasak yang tradisional membuat empal gentong tidak hanya menjadi makanan lezat, tetapi juga bagian dari warisan budaya kuliner Cirebon.',
+      'public/Empal Gentong1.jpeg')">
+      <img src="public/Empal Gentong.jpg" alt="Empal Gentong">
+      <p>Empal Gentong</p>
+      </div>
+
+      <div class="item-card" onclick="showDetails(
+      'Tahu Gejrot', 
+      'Tahu Gejrot merupakan makanan ringan khas Cirebon yang berbahan dasar tahu goreng yang dipotong kecil-kecil, kemudian disiram dengan kuah asam-manis-pedas berbahan dasar bawang putih, bawang merah, cabai rawit, gula merah, dan asam jawa. Semua bumbu ini diulek kasar untuk menjaga tekstur dan aroma segarnya. Tahu yang digunakan adalah tahu sumedang atau tahu pong yang bagian dalamnya kopong. Keunikan tahu gejrot terletak pada sensasi rasa yang ditimbulkan. Kuahnya menyentuh lidah dengan asam segar, manis gula aren, dan pedas cabai, menciptakan kombinasi rasa yang menggugah selera. Potongan tahu yang menyerap kuah dengan sempurna membuat tiap gigitan terasa meledak dengan rasa. Porsi yang kecil dan cara penyajiannya yang praktis membuat makanan ini sangat cocok sebagai kudapan sore hari. Tahu gejrot biasanya dijajakan secara tradisional dengan gerobak kayu kecil, lengkap dengan cobek dan ulekan batu. Kini, makanan ini telah menyebar ke berbagai kota besar, namun tetap mempertahankan identitas Cirebon sebagai asal-usulnya. Cita rasa autentik tahu gejrot tetap menjadi kebanggaan warga Cirebon dan warisan kuliner yang terus digemari lintas generasi.',
+      'public/Tahu Gejrot.jpeg')">
+      <img src="public/Tahu Gejrot1.jpg" alt="Tahu Gejrot">
+      <p>Tahu Gejrot</p>
+      </div>
+
+      <div class="item-card" onclick="showDetails(
+      'Nasi Jamblang', 
+      'Nasi Jamblang adalah makanan khas Cirebon yang awalnya berasal dari daerah Jamblang, Kabupaten Cirebon. Yang membedakannya dari nasi biasa adalah pembungkusnya yang menggunakan daun jati, memberikan aroma harum yang khas. Nasi ini disajikan bersama berbagai lauk-pauk seperti sambal goreng, tempe orek, tahu, daging semur, telur pindang, dan khasnya: semur hati atau paru. Konsep prasmanan menjadi ciri khas dari warung nasi jamblang. Pelanggan bisa memilih lauk sesuai selera dan menggabungkannya di atas sepiring nasi putih. Sajian ini sangat praktis dan fleksibel, membuatnya cocok untuk segala kalangan, baik pekerja harian hingga wisatawan. Penggunaan daun jati bukan hanya untuk aroma, tetapi juga memperpanjang kehangatan dan ketahanan nasi. Nasi jamblang bukan hanya sekadar makanan, tetapi juga representasi nilai kebersamaan dan kerakyatan. Pada masa penjajahan, nasi ini menjadi makanan para pekerja paksa pembangunan jalan Anyer–Panarukan. Kini, nasi jamblang telah naik kelas sebagai ikon kuliner yang mencerminkan warisan sejarah dan cita rasa lokal yang bertahan hingga kini.',
+      'public/Nasi Jamblang.jpg')">
+      <img src="public/Nasi Jamblang.webp" alt="Nasi Jamblang">
+      <p>Nasi Jamblang</p>
+      </div>
+
+      <div class="item-card" onclick="showDetails(
+      'Docang', 
+      'Docang adalah makanan tradisional Cirebon yang terdiri dari lontong, tauge rebus, daun singkong, dan kerupuk, disiram dengan kuah oncom yang hangat dan gurih. Kuah ini terbuat dari fermentasi kacang kedelai yang dihancurkan, lalu dimasak bersama bumbu seperti bawang putih, kencur, dan garam. Hidangan ini biasa disantap saat pagi hari sebagai sarapan masyarakat Cirebon. Tekstur dari docang sangat khas: lembutnya lontong dan daun singkong berpadu dengan renyahnya tauge serta gurihnya kerupuk. Kuah oncom memberikan rasa yang unik dan umami, dengan aroma fermentasi yang khas dan menggugah selera. Terkadang, docang juga disajikan dengan sambal jika ingin rasa yang lebih pedas dan segar. Sayangnya, docang saat ini mulai sulit ditemukan, dan hanya dijual oleh sedikit penjual yang masih mempertahankan keaslian rasanya. Namun demikian, makanan ini adalah bagian penting dari sejarah kuliner rakyat Cirebon dan menjadi representasi kuat dari kekayaan pangan lokal yang sederhana namun kaya rasa.',
+      'public/Docang.jpeg')">
+      <img src="public/Docang.webp" alt="Docang">
+      <p>Docang</p>
+      </div>
+
+      <div class="item-card" onclick="showDetails(
+      'Mi Koclok', 
+      'Mi Koclok adalah sajian mi khas Cirebon yang unik karena menggunakan kuah kental berbahan santan dan tepung maizena. Diberi nama “koclok” karena cara memasak mi-nya yang dikocok-kocok di air panas agar teksturnya lebih kenyal dan tidak lengket. Kuahnya yang berwarna putih agak kekuningan memberikan kesan berbeda dari kebanyakan mi pada umumnya. Isian mi koclok biasanya terdiri dari suwiran ayam, kol rebus, telur rebus, tauge, dan bawang goreng. Kuah kentalnya memberikan sensasi creamy dan gurih yang menempel di lidah. Terkadang ditambahkan sambal dan kecap manis agar lebih kaya rasa. Tekstur mi yang halus dan kuah yang hangat menjadikan hidangan ini cocok dinikmati di malam hari atau saat cuaca dingin. Mi Koclok mencerminkan keunikan adaptasi cita rasa Cirebon yang berbeda dari daerah lain. Meski terlihat sederhana, kombinasi bahan dan cara memasaknya membuat mi koclok menjadi salah satu sajian yang sulit dilupakan. Kini, mi koclok telah menjadi sajian wajib coba bagi para pelancong kuliner yang ingin menjelajahi warisan gastronomi Cirebon.',
+      'public/Mi Koclok.jpeg')">
+      <img src="public/Mi Koclok.webp" alt="Mi Koclok">
+      <p>Mi Koclok</p>
+      </div>
+
+      <div class="item-card" onclick="showDetails(
+      'Sega Lengko', 
+      'Sega Lengko adalah salah satu kuliner khas Cirebon yang sederhana namun sarat makna budaya. Hidangan ini terdiri dari nasi putih yang disajikan dengan tahu dan tempe goreng, tauge rebus, irisan mentimun segar, daun kucai, dan disiram dengan saus kacang yang gurih serta kecap manis khas. Meski tampilannya tampak sederhana, rasa dari perpaduan bahan-bahan ini mampu menciptakan kenikmatan yang ringan, sehat, dan tetap menggugah selera. Sebagai makanan rakyat, Sega Lengko merefleksikan kesederhanaan gaya hidup masyarakat pesisir Cirebon yang mengutamakan keberkahan dari hasil bumi. Dalam penyajiannya, saus kacang dibuat dari kacang tanah sangrai yang diulek bersama bawang putih, garam, dan sedikit kencur, menciptakan rasa yang khas. Hidangan ini biasanya disantap sebagai sarapan atau makan siang ringan, apalagi di tengah cuaca panas pesisir, karena bahan-bahannya menyegarkan dan tidak terlalu berat di perut. Selain enak dan bergizi, Sega Lengko juga memiliki nilai historis dan filosofis. Konon, makanan ini sudah ada sejak masa kolonial dan menjadi simbol perlawanan masyarakat kelas bawah terhadap kemewahan yang dibawa penjajah. Kini, Sega Lengko tak hanya dijumpai di warung pinggir jalan, tapi juga di restoran dan hotel berbintang yang mengangkat kuliner tradisional sebagai bagian dari kekayaan budaya lokal Cirebon. Dengan harga terjangkau dan cita rasa yang otentik, Sega Lengko adalah salah satu kuliner yang wajib dicoba saat mengunjungi kota udang ini.',
+      'public/Sega Lengko.jpg')">
+      <img src="public/Sega Lengko.webp" alt="Sega Lengko">
+      <p>Sega Lengko</p>
+      </div>
+
+      <div class="item-card" onclick="showDetails(
+      'Kerupuk Melarat', 
+      'Kerupuk Melarat merupakan camilan khas Cirebon yang terkenal unik karena proses penggorengannya tidak menggunakan minyak, melainkan pasir panas. Nama melarat yang berarti miskin bukanlah penghinaan, melainkan justru penanda sejarah—kerupuk ini berasal dari masa sulit ketika minyak goreng sulit didapat, sehingga masyarakat berinovasi dengan cara menggoreng menggunakan pasir sungai yang telah dibersihkan dan dipanaskan. Hasilnya adalah kerupuk berwarna-warni yang ringan, renyah, dan memiliki tekstur khas yang tidak bisa ditemukan pada kerupuk biasa. Dibuat dari adonan tepung tapioka dengan bumbu sederhana seperti garam dan pewarna alami, Kerupuk Melarat tidak hanya lezat tetapi juga menggugah selera karena tampilannya yang meriah. Warna-warna cerah seperti merah muda, hijau, kuning, dan ungu menambah daya tarik visual, menjadikannya favorit terutama di kalangan anak-anak. Biasanya, kerupuk ini disajikan bersama sambal asam pedas atau sambal petis, memberikan rasa gurih dan asam yang pas di lidah. Dalam bentuknya yang sederhana, camilan ini merepresentasikan semangat dan kreativitas masyarakat Cirebon dalam menghadapi keterbatasan. Saat ini, Kerupuk Melarat telah menjadi oleh-oleh khas yang banyak dicari oleh wisatawan. Ia bukan hanya sekadar makanan ringan, melainkan simbol identitas dan ketahanan budaya lokal. Banyak pengrajin kerupuk di Cirebon yang masih menjaga cara tradisional pembuatannya, sehingga cita rasa autentiknya tetap terjaga. Di tengah gempuran makanan modern, Kerupuk Melarat tetap bertahan sebagai camilan khas yang merakyat dan membanggakan.',
+      'public/Kerupuk Melarat.webp')">
+      <img src="public/Kerupuk Melarat.jpg" alt="Kerupuk Melarat">
+      <p>Kerupuk Melarat</p>
+      </div>
+
+      </div>
+    </div>
+
+    <div class="category-container">
+      <h2 class="category-title">🗣️ Bahasa dan Aksara</h2>
+      <div class="scroll-container">
+
+       <div class="item-card" onclick="showDetails(
+      'Basa Cirebon (Bahasa Cirebon)', 
+      'Bahasa Cirebon memiliki beberapa dialek yang berbeda tergantung wilayahnya. Beberapa yang paling dikenal adalah dialek Jawareh (wilayah perbatasan Jawa), Plered, dan Dermayon (Indramayu). Setiap dialek memiliki ciri khas fonetik dan kosakata lokal, namun tetap bisa saling dimengerti oleh penutur Basa Cirebon. Ragam dialek ini menunjukkan bahwa bahasa Cirebon sangat hidup dan kaya akan ekspresi budaya masyarakatnya. Bahkan dalam konteks sehari-hari, gaya bicara bisa berbeda antara masyarakat kota dan pedesaan. Basa Cirebon bukan hanya sarana komunikasi, tetapi juga menjadi media penting dalam pelestarian budaya. Bahasa ini digunakan dalam kesenian tradisional seperti sandiwara rakyat, pantun, tari topeng, dan dalam dialog di lingkungan keraton. Bahasa ini juga diajarkan secara turun-temurun di keluarga dan dalam kegiatan budaya lokal. Namun, dengan maraknya penggunaan bahasa Indonesia dan pengaruh globalisasi, eksistensi Basa Cirebon menghadapi tantangan. Karena itu, pelestarian melalui pendidikan, media digital, dan dokumentasi sangat penting agar Bahasa Cirebon tetap lestari sebagai warisan identitas masyarakat Cirebon.',
+      'public/Basa Cirebon (Bahasa Cirebon).webp')">
+      <img src="public/Basa Cirebon (Bahasa Cirebon).jpg" alt="Basa Cirebon (Bahasa Cirebon)">
+      <p>Basa Cirebon (Bahasa Cirebon)</p>
+      </div>
+
+      <div class="item-card" onclick="showDetails(
+      'Aksara Pegon', 
+      'Aksara Pegon adalah sistem tulisan yang digunakan untuk menuliskan bahasa Jawa dan Sunda dengan menggunakan huruf Arab. Di Cirebon, aksara ini memiliki posisi yang istimewa karena erat kaitannya dengan penyebaran Islam oleh para wali, khususnya Sunan Gunung Jati. Penggunaan Pegon menjadi jembatan antara budaya lokal dan agama, di mana ajaran-ajaran Islam dapat disampaikan melalui bahasa ibu masyarakat setempat namun dalam huruf Arab, yang saat itu dianggap sakral dan bernilai tinggi. Pegon tidak sama dengan bahasa Arab biasa. Ia memiliki tambahan huruf dan tanda vokal khusus yang disesuaikan untuk mewakili bunyi-bunyi dalam bahasa Jawa atau Cirebon yang tidak ada dalam bahasa Arab. Contohnya, bunyi pa , ga, atau ng yang umum di bahasa Nusantara, ditulis dengan huruf Arab yang dimodifikasi. Melalui Pegon, banyak naskah kuno berisi syair keagamaan, nasihat, sejarah, dan doa-doa lokal ditulis dan diwariskan dari generasi ke generasi, baik dalam bentuk manuskrip maupun lisan. Di Cirebon, aksara Pegon kerap dijumpai dalam manuskrip kuno, terutama di keraton, masjid-masjid tua seperti Masjid Agung Sang Cipta Rasa, dan dalam budaya lisan seperti tembang atau kidung. Meskipun sekarang mulai jarang digunakan, pelestarian aksara Pegon penting karena merupakan warisan literasi lokal yang kaya akan nilai budaya dan spiritual. Beberapa pesantren dan komunitas kebudayaan Cirebon mulai aktif mengajarkan kembali aksara ini sebagai bagian dari pelestarian identitas budaya.',
+      'public/Aksara Pegon1.jpg')">
+      <img src="public/Aksara Pegon.jpg" alt="Aksara Pegon">
+      <p>Aksara Pegon</p>
+      </div>
+
+      
+      <div class="item-card" onclick="showDetails(
+      'Aksara Jawa Cirebonan', 
+      'Aksara Jawa Cirebonan merupakan salah satu bentuk adaptasi dari Aksara Jawa (Hanacaraka) yang telah digunakan secara turun-temurun oleh masyarakat Cirebon, khususnya dalam lingkungan keraton, kesenian, dan karya sastra tradisional. Aksara ini digunakan untuk menuliskan bahasa Cirebon yang pada dasarnya merupakan turunan dan campuran dari bahasa Jawa dan Sunda, dengan karakteristik dan kekhasan lokal. Meskipun bentuk hurufnya secara umum menyerupai Aksara Jawa pada umumnya, penggunaannya menyesuaikan dengan dialek, kosakata, serta gaya tutur khas Cirebon yang lebih komunikatif dan ekspresif. Penggunaan Aksara Jawa Cirebonan sering ditemukan dalam naskah-naskah kuno, tembang macapat, babad (sejarah lokal), serta tulisan pada ornamen-ornamen keraton seperti Keraton Kasepuhan, Kanoman, dan Kacirebonan. Selain sebagai media tulis, aksara ini juga menjadi simbol status dan intelektualitas dalam masyarakat tradisional Cirebon, terutama di lingkungan para pujangga, abdi dalem, dan tokoh agama. Pengajaran aksara ini menjadi bagian dari pendidikan keraton dan pesantren zaman dahulu, menunjukkan bahwa literasi budaya telah menjadi bagian penting dalam kehidupan masyarakat Cirebon sejak lama. Namun, seiring perkembangan zaman dan dominasi aksara Latin, penggunaan Aksara Jawa Cirebonan mengalami penurunan drastis. Upaya pelestarian kini tengah dilakukan oleh berbagai komunitas budaya dan lembaga pendidikan yang ingin menghidupkan kembali kebanggaan terhadap aksara leluhur ini. Aksara Jawa Cirebonan tidak hanya sekadar simbol tulisan, tetapi juga cerminan identitas budaya, nilai kearifan lokal, dan jejak sejarah intelektual masyarakat Cirebon yang patut dihargai dan dilestarikan.',
+      'public/Aksara Jawa Cirebonan.webp')">
+      <img src="public/Aksara Jawa Cirebonan.png" alt="Aksara Jawa Cirebonan">
+      <p>Aksara Jawa Cirebonan</p>
+      </div>
+
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Modal Detail Arsip -->
+<div id="detailModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2 id="modalTitle">Judul Arsip</h2>
+    <img id="modalImage" src="" alt="Gambar Arsip" style="max-width: 100%; margin-bottom: 15px;">
+    <div id="modalDesc"></div> <!-- Ganti dari <p> ke <div> -->
+    <audio id="modalAudio" controls style="display:none; margin-top: 1rem;"></audio>
+  </div>
+</div>
+
+   <footer id="contact">
+    <div class="container">
+      <p>📧 rarasajine@email.com | 📞 +62 812 1234 5678</p>
+      <p>Instagram <a href="#" target="_blank">@rarasajine</a></p>
+      <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.7;">&copy; 2025 Rarasajiné. Semua hak dilindungi.</p>
+    </div>
+  </footer>
+
+  <script>
+ function showDetails(title, desc, imgSrc) {
+  document.getElementById('modalTitle').textContent = title;
+  document.getElementById('modalDesc').innerHTML = `<h4 style="text-align: justify; font-size: 14px; font-weight: normal; line-height: 1.6;">${desc}</h4>`;
+  document.getElementById('modalImage').src = imgSrc;
+  document.getElementById('detailModal').style.display = 'block';
+}
+
+    function closeModal() {
+      document.getElementById('detailModal').style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+      if (event.target === document.getElementById('detailModal')) {
+        closeModal();
+      }
+    }
+
+    const fadeElements = document.querySelectorAll('.fade-in');
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target); 
+      }
+    });
+  }, {
+    threshold: 0.1 
+  });
+
+  fadeElements.forEach(el => {
+    observer.observe(el);
+  });
+  </script>
+
+<script src="archive.js"></script>
+</body>
+</html> 

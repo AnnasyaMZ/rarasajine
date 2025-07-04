@@ -1,0 +1,107 @@
+
+  <!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Raras ing Bantu - RarasBot</title>
+  <link rel="stylesheet" href="rarasingbantu.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body class="page-load-animate">
+  <div class="page-wrapper">
+
+
+<header>
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <img src="public/logo.PNG" alt="Logo Rarasajiné" class="logo-img" />
+        </div>
+        <ul class="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="tentang.html">Tentang</a></li>
+          <li><a href="profil.html">Profil</a></li>
+        </ul>
+        <button class="burger" id="burger-toggle" title="Toggle Navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="burger-dropdown" id="burger-dropdown">
+        <a href="rarasingwaktu.html">
+          <img src="public/ICON/WAKTU.png" alt="Waktu" />
+          <div>
+            <h4>Raras ing Waktu</h4>
+            <p>Jelajahi sejarah Cirebon dari masa ke masa</p>
+          </div>
+        </a>
+        <a href="archive.html">
+          <img src="public/ICON/ARSIP.png" alt="Archive" />
+          <div>
+            <h4>Raras Archive</h4>
+            <p>Intip koleksi warisan budaya digital</p>
+          </div>
+        </a>
+        <a href="rarasingbantu.html">
+          <img src="public/ICON/BOT.png" alt="Bantu" />
+          <div>
+            <h4>Raras ing Bantu</h4>
+            <p>Tanya tentang Cirebon dengan RarasBot</p>
+          </div>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+
+  <section class="hero-bantu">
+    <div class="hero-content">
+      
+      <h1>👋 Bagaimana kabarmu?</h1>
+      <p>Apa yang bisa Raras bantu hari ini?</p>
+    </div>
+  </section>
+
+
+  <section class="chat-section">
+    <div class="chat-box">
+      <div class="chat-placeholder">
+        <p><i>RarasBot siap membantumu menjelajahi budaya, sejarah, dan tradisi Cirebon.</i></p>
+    
+        <input type="text" placeholder="Tanyakan apa saja tentang Cirebon..." />
+        <button>Kirim</button>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+<div class="chatbot-widget" id="chatbot">
+  <div class="chatbot-header">
+    🤖 Raras ing Bantu
+    <span class="close-chat" onclick="toggleChat()">✖</span>
+  </div>
+  <div class="chatbot-body" id="chatBody">
+    <div class="bot-msg">Halo! Aku Raras ing Bantu. Tanyakan apa pun tentang budaya Cirebon 😊</div>
+  </div>
+  <div class="chatbot-input">
+    <input type="text" id="userInput" placeholder="Ketik pertanyaan di sini..." onkeypress="handleKey(event)">
+    <button onclick="sendMessage()">Kirim</button>
+  </div>
+</div>
+
+<button class="chat-toggle-btn" onclick="toggleChat()">💬</button>
+
+  <footer id="contact">
+    <div class="container">
+      <p>📧 rarasajine@email.com | 📞 +62 812 1234 5678</p>
+      <p>Instagram <a href="#" target="_blank">@rarasajine</a></p>
+      <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.7;">&copy; 2025 Rarasajiné. Semua hak dilindungi.</p>
+    </div>
+  </footer>
+
+<script src="rarasingabantu.js"></script>
+</body>
+</html>

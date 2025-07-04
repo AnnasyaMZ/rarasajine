@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rarasajiné: Menjaga Nilai Budaya Cirebon dalam Dunia Digital</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="rarasingwaktu.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scroll-carousel@1.2.7/dist/scroll.carousel.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/scroll-carousel@1.2.7/dist/scroll.carousel.min.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<header>
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <img src="public/logo.PNG" alt="Logo Rarasajiné" class="logo-img" />
+        </div>
+        <ul class="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="tentang.html">Tentang</a></li>
+          <li><a href="profil.html">Profil</a></li>
+        </ul>
+        <button class="burger" id="burger-toggle" title="Toggle Navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="burger-dropdown" id="burger-dropdown">
+        <a href="rarasingwaktu.html">
+          <img src="public/ICON/WAKTU.png" alt="Waktu" />
+          <div>
+            <h4>Raras ing Waktu</h4>
+            <p>Jelajahi sejarah Cirebon dari masa ke masa</p>
+          </div>
+        </a>
+        <a href="archive.html">
+          <img src="public/ICON/ARSIP.png" alt="Archive" />
+          <div>
+            <h4>Raras Archive</h4>
+            <p>Intip koleksi warisan budaya digital</p>
+          </div>
+        </a>
+        <a href="rarasingbantu.html">
+          <img src="public/ICON/BOT.png" alt="Bantu" />
+          <div>
+            <h4>Raras ing Bantu</h4>
+            <p>Tanya tentang Cirebon dengan RarasBot</p>
+          </div>
+        </a>
+      </div>
+    </nav>
+  </header>
+  
+  <section class="hero" style="background: url('public/bannerprofil.png') center/cover no-repeat;">
+    <div class="overlay"></div>
+    <div class="container hero-content">
+      <h1>Raras Ing Waktu</h1>
+      <p>Jelajahi sejarah Cirebon dari masa ke masa</p>
+    </div>
+  </section>
+
+  <section class="penjelasan fade-in">
+    <div class="container">
+      <h2 >Selamat datang di Raras Ing Waktu</h2>
+      <p>Menelusuri jejak waktu Cirebon, dari muara Caruban hingga gemerlap kota modern hari ini. Temukan kisah para pendiri, kemegahan keraton, hingga warisan budaya yang tetap hidup di tengah zaman. Mari menyelami sejarah bukan sebagai masa lalu yang usang, tapi sebagai akar yang menghidupkan jati diri.</p>
+    </div>
+</section>
+
+<div class="slider-container">
+  <div class="slider-wrapper" id="sliderWrapper">
+
+    <div class="slide">
+      <img src="public/kiagengtapa.jpeg" alt="kiagengtapa">
+      <h3>Awal Mula dan Pembentukan (sebelum 1445–1479)</h3>
+      <button class="cta-button" onclick="openModal(0)">Selengkapnya</button>
+    </div>
+
+    <div class="slide">
+      <img src="public/foto_sunan_gunung_jati.jpeg" alt="sunangunungjati">
+      <h3>Kejayaan di Bawah Sunan Gunung Jati (1479–1568)</h3>
+      <button class="cta-button" onclick="openModal(1)">Selengkapnya</button>
+    </div>
+
+    <div class="slide">
+      <img src="public/Panembahan Ratu I.jpg" alt="PanembahanRatu">
+      <h3>Konsolidasi di Era Panembahan Ratu I (1568–1649)</h3>
+      <button class="cta-button" onclick="openModal(2)">Selengkapnya</button>
+    </div>
+
+    <div class="slide">
+      <img src="public/kesultanan.webp" alt="kesultanan">
+      <h3>Krisis Suksesi & Perpecahan (1649–1679)</h3>
+      <button class="cta-button" onclick="openModal(3)">Selengkapnya</button>
+    </div>
+
+    <div class="slide">
+      <img src="public/voc.jpg" alt="voc">
+      <h3>Empat Keraton & Era Kolonial (1679–1906)</h3>
+      <button class="cta-button" onclick="openModal(4)">Selengkapnya</button>
+    </div>
+
+    <div class="slide">
+      <img src="public/perjanjian-linggarjati.jpg" alt="linggarjati">
+      <h3>Masa Kemerdekaan & Modernisasi (1945–Sekarang)</h3>
+      <button class="cta-button" onclick="openModal(5)">Selengkapnya</button>
+    </div>
+
+  </div>
+
+  <div class="slider-buttons">
+    <button onclick="prevSlide()">←</button>
+    <button onclick="nextSlide()">→</button>
+  </div>
+</div>
+
+
+<div id="detailModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">×</span>
+    <h3 id="modalTitle"></h3>
+
+    <div class="gallery-container">
+      <button class="gallery-nav left" onclick="prevImage()">‹</button>
+      <div class="gallery-slide" id="modalGallery"></div>
+      <button class="gallery-nav right" onclick="nextImage()">›</button>
+    </div>
+
+    <p id="modalDesc"></p>
+    <audio id="modalAudio" controls></audio>
+  </div>
+</div>
+
+  <footer id="contact">
+    <div class="container">
+      <p>📧 rarasajine@email.com | 📞 +62 812 1234 5678</p>
+      <p>Instagram <a href="#" target="_blank">@rarasajine</a></p>
+      <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.7;">&copy; 2025 Rarasajiné. Semua hak dilindungi.</p>
+    </div>
+  </footer>
+
+
+<script src="rarasingwaktu.js"></script>
+
+</body>
+</html>
